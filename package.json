@@ -1,25 +1,38 @@
 {
-  "name": "let-s-get-dirty",
+  "name": "lets-get-dirty",
   "version": "1.0.0",
   "private": true,
-  "description": "let-s-get-dirty",
+  "description": "lets-get-dirty",
   "author": "Andrew Ruslander",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "showcase": "gatsby develop --host=0.0.0.0",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
     "babel-plugin-styled-components": "^2.1.4",
+    "formik": "^2.4.6",
     "gatsby": "^5.14.0",
+    "gatsby-plugin-sass": "^6.14.0",
     "gatsby-plugin-styled-components": "^6.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.13"
+    "react-number-format": "^5.4.4",
+    "react-phone-input-2": "^2.15.1",
+    "sass": "^1.81.0",
+    "styled-components": "^6.1.13",
+    "yup": "^1.7.0"
+  },
+  "devDependencies": {
+    "gatsby-plugin-netlify": "^5.1.1"
   }
 }
