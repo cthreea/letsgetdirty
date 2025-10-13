@@ -179,7 +179,7 @@ const IndexPage = () => {
               <li>Sessions can be monthly or biweekly</li>
               <li>Maximum of nine monthly sessions beginning in February</li>
               <li>Remote sessions via Zoom or Microsoft Teams</li>
-              <li>In-person sessions available in a 30-mile radius from western Chester Count (includes Center City Philadelphia)</li>
+              <li>In-person sessions available in a 30-mile radius from western Chester County, or a location in Center City Philadelphia</li>
               <li>Each one-hour session is $400</li>
               <li>5% discount for government entities, schools, and for any client that commits to a program of four or more sessions!</li>
               <li>Adjusted rates for non-profit organizations and groups</li>
@@ -253,7 +253,7 @@ const IndexPage = () => {
             Want <b>Let's Get Dirty! Grow it Organic</b> sessions at your place of business or workspace? Have any questions that aren't answered here? Please
             contact Deb directly at <b>610-384-2535</b>.
           </p>
-          <p>Alternatively, submit the information below and Deb will get in touch with you as soon as possible:</p>
+          {/* <p>Alternatively, submit the information below and Deb will get in touch with you as soon as possible:</p>
           <Formik
             initialValues={{ name: '', company: '', email: '', phone: '', comments: 'Could you give me more information on...' }}
             validationSchema={yup.object().shape({
@@ -361,7 +361,7 @@ const IndexPage = () => {
                 </Paper>
               </Form>
             )}
-          </Formik>
+          </Formik> */}
         </div>
       </div>
     </main>
