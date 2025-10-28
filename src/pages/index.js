@@ -117,7 +117,7 @@ const IndexPage = () => {
               <Paper style={{ padding: '1rem' }}>
                 <TabPanel value={currentTab} index={0} class="flex-auto">
                   <ul>
-                    <li>Series introduction</li>
+                    <li>Series introduction: Why growing organic is healthier for you and better for our world</li>
                     <li>Location, location, location: Site your growing space for the best results</li>
                     <li>What and how to plant in the merry month of March</li>
                     <li>Don't guess - get a soil test: Learn cool info about your growing space and how to improve it</li>
@@ -270,12 +270,12 @@ const IndexPage = () => {
               phone: yup.string()
             })}
             onSubmit={(values, { setSubmitting }) => {
-              alert(`Just testing!\n\n${JSON.stringify(values)}`);
+              console.log(JSON.stringify(values));
               setSubmitting(false);
             }}
           >
             {({ values, errors, touched, handleChange, handleBlur, isSubmitting }) => (
-              <Form>
+              <Form action="https://formsubmit.co/bahamutn@aol.com" method="POST">
                 <Paper elevation={3} style={{ padding: '1rem' }}>
                   <Grid container spacing={2}>
                     <Grid size={12}>
