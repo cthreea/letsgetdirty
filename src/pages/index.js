@@ -20,6 +20,7 @@ import "./index.scss";
 const IndexPage = () => {
   const topRef = useRef(null);
   const [currentTab, setCurrentTab] = useState(0);
+  const [status, setStatus] = useState({});
 
   return (
     <main id="top" ref={topRef}>
@@ -253,7 +254,7 @@ const IndexPage = () => {
             Want <b>Let's Get Dirty! Grow it Organic</b> sessions at your place of business or workspace? Have any questions that aren't answered here? Please
             contact Deb directly at <b>610-384-2535</b>.
           </p>
-          {/* <p>Alternatively, submit the information below and Deb will get in touch with you as soon as possible:</p>
+          <p>Alternatively, submit the information below and Deb will get in touch with you as soon as possible:</p>
           <Formik
             initialValues={{ name: '', company: '', email: '', phone: '', comments: 'Could you give me more information on...' }}
             validationSchema={yup.object().shape({
@@ -269,18 +270,38 @@ const IndexPage = () => {
                 }),
               phone: yup.string()
             })}
-            onSubmit={(values, { setSubmitting }) => {
-              console.log(JSON.stringify(values));
-              setSubmitting(false);
+            onSubmit={async (values, { setSubmitting, resetForm }) => {
+              try {
+                console.log(JSON.stringify(values));
+                const res = await fetch("https://formsubmit.co/ajax/6d7d45f622b6744d1f62c5e1dd2afd28", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                  },
+                  body: JSON.stringify(values),
+                });
+
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+                setStatus({ ok: true, msg: "✅ Thanks! Your message has been sent." });
+                resetForm();
+              } catch (err) {
+                console.error(err);
+                setStatus({ ok: false, msg: "❌ Something went wrong. Please try again later." });
+              } finally {
+                setSubmitting(false);
+              }
             }}
           >
             {({ values, errors, touched, handleChange, handleBlur, isSubmitting }) => (
-              <Form action="https://formsubmit.co/bahamutn@aol.com" method="POST">
+              <Form>
                 <Paper elevation={3} style={{ padding: '1rem' }}>
                   <Grid container spacing={2}>
                     <Grid size={12}>
                       <TextField
                         id="name"
+                        name="name"
                         label="Name"
                         variant="outlined"
                         value={values.name}
@@ -294,6 +315,7 @@ const IndexPage = () => {
                     <Grid size={12}>
                       <TextField
                         id="company"
+                        name="company"
                         label="Company or group"
                         variant="outlined"
                         value={values.company}
@@ -307,6 +329,7 @@ const IndexPage = () => {
                     <Grid size={6}>
                       <TextField
                         id="email"
+                        name="email"
                         label="Email address"
                         variant="outlined"
                         value={values.email}
@@ -320,6 +343,7 @@ const IndexPage = () => {
                     <Grid size={6}>
                       <PatternFormat
                         id="phone"
+                        name="phone"
                         label="Phone number"
                         variant="outlined"
                         format="(###) ###-####"
@@ -336,6 +360,7 @@ const IndexPage = () => {
                     <Grid size={12}>
                       <TextField
                         id="comments"
+                        name="comments"
                         label="Comments, questions, etc."
                         variant="outlined"
                         multiline
@@ -349,19 +374,26 @@ const IndexPage = () => {
                       />
                     </Grid>
                     <Grid offset="auto">
-                      <Button
-                        type="submit"
-                        variant="contained"
-                        disabled={isSubmitting}
-                      >
-                        Submit
-                      </Button>
+                      <div class="flex">
+                        {status?.msg && (
+                          <span style={{ marginRight: '10px', fontSize: 'medium' }}>
+                            {status.msg}
+                          </span>
+                        )}
+                        <Button
+                          type="submit"
+                          variant="contained"
+                          disabled={isSubmitting}
+                        >
+                          Submit
+                        </Button>
+                      </div>
                     </Grid>
                   </Grid>
                 </Paper>
               </Form>
             )}
-          </Formik> */}
+          </Formik>
         </div>
       </div>
     </main>
