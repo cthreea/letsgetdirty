@@ -181,7 +181,7 @@ const IndexPage = () => {
               <li>Maximum of nine monthly sessions beginning in February</li>
               <li>Remote sessions via Zoom or Microsoft Teams</li>
               <li>In-person sessions available in a 30-mile radius from western Chester County, or a location in Center City Philadelphia</li>
-              <li>Each one-hour session is $400</li>
+              <li>Each one-hour session is $365</li>
               <li>5% discount for government entities, schools, and for any client that commits to a program of four or more sessions!</li>
               <li>Adjusted rates for non-profit organizations and groups</li>
             </ul>
