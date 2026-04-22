@@ -175,18 +175,18 @@ const IndexPage = () => {
               </Paper>
             </div>
 
+            <p>
+              Ready to roll up your sleeves and spice up your workplace? <b>Let's Get Dirty! Grow it Organic</b> isn't just
+              about wellness - it's about fun, flavor, and a little bit of chaos (the good kind). Whether your budget is
+              crunchy or creamy, we'll dig up sessions that get your team digging in, laughing out loud, and eating healthy - all
+              the way from seed to eats. Let's turn your workplace into the coolest garden party around!
+            </p>
             <ul>
-              <li>Each session is approximately forty-five to fifty-five minutes (depending on client needs), followed by a Q&amp;A</li>
-              <li>Sessions can be monthly or biweekly</li>
-              <li>Maximum of nine monthly sessions beginning in February</li>
-              <li>Remote sessions via Zoom or Microsoft Teams</li>
-              <li>In-person sessions available in a 30-mile radius from western Chester County, or a location in Center City Philadelphia</li>
-              <li>Each one-hour session is $365</li>
-              <li>5% discount for government entities, schools, and for any client that commits to a program of four or more sessions!</li>
-              <li>Adjusted rates for non-profit organizations and groups</li>
+              <li>Flexible session plans for specific needs and scheduling preferences</li>
+              <li>Special rates for government entities, schools, and non-profit organizations</li>
+              <li>Committing to a series of four or more sessions adds an additional discount!</li>
+              <li><a href="#contact">Contact Deb</a> for more information and to get things germinating!</li>
             </ul>
-
-            <p>The program can also be <b>customized</b> according to client needs and scheduling.</p>
           </section>
 
           <hr id="testimonials" />
