@@ -10,12 +10,20 @@ import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
 
 import { TabPanel } from "../components/TabPanel";
+import { YouTubeGallery } from "../components/YouTubeGallery";
 import debPortrait from "../images/deb_portrait.jpg";
 import header from "../images/harvest_basket.jpg";
 import logo from "../images/logo.jpg";
 import logoWithText from "../images/logo_w_text.png";
 
 import "./index.scss";
+
+const youtubeVideos = [
+  { title: "How to save seeds from your own plants for the next year", url: "https://www.youtube.com/shorts/oTkcHdjEmLU" },
+  { title: "Seashells are great for your plants", url: "https://www.youtube.com/shorts/_qE4koy0-do" },
+  { title: "Grow fall flowers for hungry pollinators", url: "https://www.youtube.com/shorts/t5cc4j_zC0U" },
+  { title: "Seaweed! Trace minerals treat for your plants", url: "https://www.youtube.com/shorts/YpdLjng1j1o" },
+];
 
 const IndexPage = () => {
   const topRef = useRef(null);
@@ -31,6 +39,7 @@ const IndexPage = () => {
             style={{ height: '50px' }}
           />
         </Button>
+        <a href="#videos">Garden Videos</a>
         <a href="#meet-deb">Meet Deb!</a>
         <a href="#course-information">Course Information</a>
         <a href="#testimonials">Testimonials</a>
@@ -72,6 +81,12 @@ const IndexPage = () => {
               Not sure where to start? <b>Deb can help!</b>
             </p>
           </section>
+
+          <hr id="videos" />
+
+          <h1>Garden Videos</h1>
+          <p>Dig into Deb's latest tips, demonstrations, and organic gardening know-how.</p>
+          <YouTubeGallery videos={youtubeVideos} />
 
           <hr id="meet-deb" />
 
