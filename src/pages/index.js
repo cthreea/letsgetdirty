@@ -19,10 +19,10 @@ import logoWithText from "../images/logo_w_text.png";
 import "./index.scss";
 
 const youtubeVideos = [
-  { title: "How to save seeds from your own plants for the next year", url: "https://www.youtube.com/shorts/oTkcHdjEmLU" },
+  { title: "Seaweed! Trace minerals treat for your plants", url: "https://www.youtube.com/shorts/YpdLjng1j1o" },
   { title: "Seashells are great for your plants", url: "https://www.youtube.com/shorts/_qE4koy0-do" },
   { title: "Grow fall flowers for hungry pollinators", url: "https://www.youtube.com/shorts/t5cc4j_zC0U" },
-  { title: "Seaweed! Trace minerals treat for your plants", url: "https://www.youtube.com/shorts/YpdLjng1j1o" },
+  { title: "How to save seeds from your own plants for the next year", url: "https://www.youtube.com/shorts/oTkcHdjEmLU" },
 ];
 
 const IndexPage = () => {
